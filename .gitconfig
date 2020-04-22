@@ -1,0 +1,19 @@
+[user]
+  name = Jackson Law
+
+[includeIf "gitdir:~/.dotfiles/"]
+  path = ~/.config/git/config-github
+[includeIf "gitdir:~/sb/gh/"]
+  path = ~/.config/git/config-github
+[includeIf "gitdir:~/sb/gl/"]
+  path = ~/.config/git/config-gitlab
+[includeIf "gitdir:~/sb/work/"]
+  path = ~/.config/git/config-work
+[includeIf "gitdir:~/.config/yadm/"]
+  path = ~/.config/git/config-yadm
+
+[gc]
+  autoDetach = false
+
+[pull]
+  rebase = true
