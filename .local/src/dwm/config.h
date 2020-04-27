@@ -17,12 +17,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=8", "Sarasa Gothic CL:size=8", "JoyPixels:size=8" };
 static char dmenufont[]             = "monospace:size=12";
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
+static char normbgcolor[]           = "#1b1b1b"; /* base03 */
+static char normbordercolor[]       = "#262626"; /* base02 */
+static char normfgcolor[]           = "#848484"; /* base0  */
+static char selfgcolor[]            = "#417caa"; /* blue   */
+static char selbordercolor[]        = "#4e45a3"; /* violet */
+static char selbgcolor[]            = "#262626"; /* base02 */
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

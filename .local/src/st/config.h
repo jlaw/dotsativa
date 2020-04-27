@@ -115,28 +115,28 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+	"#262626", /* base02  */
+	"#a53940", /* red     */
+	"#79ac3d", /* green   */
+	"#a7a140", /* yellow  */
+	"#417caa", /* blue    */
+	"#bd5089", /* magenta */
+	"#4cada6", /* cyan    */
+	"#d4d4d4", /* base2   */
+	"#1b1b1b", /* base03  */
+	"#a6693c", /* orange  */
+	"#5e5e5e", /* base01  */
+	"#6a6a6a", /* base00  */
+	"#848484", /* base0   */
+	"#4e45a3", /* violet  */
+	"#919191", /* base1   */
+	"#e2e2e2", /* base3   */
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	"#b58900", /* 256 -> cursor */
+	"#586e75", /* 257 -> rev cursor*/
+	"#002b36", /* 258 -> bg base03 */
+	"#839496", /* 259 -> fg base0 */
 };
 
 
@@ -144,10 +144,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-unsigned int defaultcs = 256;
-unsigned int defaultrcs = 257;
+unsigned int defaultfg = 12; /* base0 */
+unsigned int defaultbg = 8; /* base03 */
+unsigned int defaultcs = 3; /* yellow */
+unsigned int defaultrcs = 10; /* base01 */
 
 /*
  * Default shape of cursor
@@ -169,8 +169,8 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+static unsigned int mousefg = 14; /* base1 */
+static unsigned int mousebg = 8; /* base03 */
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
