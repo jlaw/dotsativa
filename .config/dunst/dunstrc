@@ -4,7 +4,7 @@
     geometry = "700x5-0+48"
     indicate_hidden = yes
     shrink = yes
-    transparency = 20
+    transparency = 8
     notification_height = 0
     separator_height = 4
     padding = 0
@@ -54,7 +54,7 @@
     sticky_history = yes
     history_length = 20
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/brave --new-window
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -119,10 +119,12 @@
 #    summary = "*script*"
 #    script = dunst_test.sh
 
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
+[ignore]
+    # This notification will not be displayed
+    appname = "Brave"
+    format = ""
+    timeout = 1
+    urgency = low
 
 #[history-ignore]
 #    # This notification will not be saved in history
