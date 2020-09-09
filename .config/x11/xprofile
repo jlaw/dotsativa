@@ -9,6 +9,9 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
+# Handle touchpad multitouch gestures
+libinput-gestures-setup restart
+
 setbg &			# set the background with the `setbg` script
 xrdb -merge ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources &	# Uncomment to use Xresources colors/settings on startup
 mpd &			# music player daemon-you might prefer it as a service though
