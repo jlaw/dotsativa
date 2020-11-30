@@ -17,6 +17,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'kalafut/vim-taskjuggler'
+Plug 'vim-scripts/lemon.vim'
 call plug#end()
 
 set title
@@ -33,10 +35,25 @@ set noshowcmd
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
-	filetype plugin on
+	filetype plugin indent on
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+	set list!
+	set listchars=tab:⍿⋅
+	"set tw=80
+
+" Use actual tab chars in Makefiles.
+"	autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+
+" Show tabs as 4 space chars wide
+	set tabstop=4       " The width of a TAB is set to 4.
+	set shiftwidth=4    " Indents will have a width of 4.
+"	set softtabstop=4   " Sets the number of columns for a TAB.
+"	set expandtab       " Expand TABs to spaces.
+	set softtabstop=0   " Sets the number of columns for a TAB.
+	set noexpandtab     " Do not expand TABs to spaces.
+
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
@@ -123,6 +140,11 @@ set noshowcmd
 	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 " Recompile dwmblocks on config edit.
 	autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }
+" taskjuggler
+	let g:tjp_folds_closed=1
+	map <C-]> :call ShowFullID()<CR>
+	autocmd BufWritePost *.tjp !tj3 -o %:h %
+
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
