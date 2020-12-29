@@ -5,6 +5,9 @@
 # If you don't plan on reverting to bash, you can remove the link in ~/.profile
 # to clean up.
 
+# Fix doublewidth characters using LD_PRELOAD
+export LD_PRELOAD="/usr/local/lib/wcwidth.so${LD_PRELOAD:+:${LD_PRELOAD}}"
+
 # Adds `~/.local/bin` to $PATH
 export PATH="${$(find ~/.local/bin -type d -printf %p:)%%:}:$PATH"
 
