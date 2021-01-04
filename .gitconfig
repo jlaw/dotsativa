@@ -9,7 +9,7 @@
   path = ~/.config/git/config-gitlab
 [includeIf "gitdir:~/sb/work/"]
   path = ~/.config/git/config-work
-[includeIf "gitdir:~/.config/yadm/"]
+[includeIf "gitdir:~/.local/share/yadm/"]
   path = ~/.config/git/config-yadm
 
 [gc]
