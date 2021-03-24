@@ -9,7 +9,7 @@
 export LD_PRELOAD="/usr/local/lib/wcwidth.so${LD_PRELOAD:+:${LD_PRELOAD}}"
 
 # Adds `~/.local/bin` to $PATH
-export PATH="${$(find ~/.local/bin -type d -printf %p:)%%:}:$PATH"
+export PATH="${$(find ~/.local/bin -type d -printf %p:)%%:}:$(go env GOPATH)/bin:$PATH"
 
 unsetopt PROMPT_SP
 
