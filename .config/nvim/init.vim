@@ -19,6 +19,8 @@ Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'kalafut/vim-taskjuggler'
 Plug 'vim-scripts/lemon.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'cespare/vim-toml'
 call plug#end()
 
 set title
