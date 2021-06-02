@@ -1,23 +1,26 @@
 [user]
-  name = Jackson Law
+	name = Jackson Law
+	signingkey = 0xB28B4FD18F4F93D0
 
-[includeIf "gitdir:~/.dotfiles/"]
-  path = ~/.config/git/config-github
 [includeIf "gitdir:~/sb/gh/"]
-  path = ~/.config/git/config-github
+	path = ~/.config/git/config-github
 [includeIf "gitdir:~/sb/gl/"]
-  path = ~/.config/git/config-gitlab
+	path = ~/.config/git/config-gitlab
 [includeIf "gitdir:~/sb/work/"]
-  path = ~/.config/git/config-work
+	path = ~/.config/git/config-work
 [includeIf "gitdir:~/.local/share/yadm/"]
-  path = ~/.config/git/config-yadm
+	path = ~/.config/git/config-yadm
 
 [gc]
-  autoDetach = false
+	autoDetach = false
 
 [pull]
-  rebase = true
+	rebase = true
 [diff]
 	tool = bc3
 [difftool "bc3"]
 	trustExitCode = true
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
