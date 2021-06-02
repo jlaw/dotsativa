@@ -2,9 +2,10 @@
 
 # Use gpg-agent for SSH
 export GPG_TTY="$(tty)"
-gpg-connect-agent updatestartuptty /bye >/dev/null
 unset SSH_AGENT_PID
 [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ] && export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+gpgconf --launch gpg-agent
+#gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
