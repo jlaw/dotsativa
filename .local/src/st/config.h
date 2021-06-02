@@ -111,6 +111,8 @@ unsigned int tabspaces = 8;
 
 /* bg opacity */
 float alpha = 0.8;
+float alphaOffset = 0.0;
+float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -147,6 +149,7 @@ unsigned int defaultfg = 12; /* base0 */
 unsigned int defaultbg = 8; /* base03 */
 unsigned int defaultcs = 3; /* yellow */
 unsigned int defaultrcs = 10; /* base01 */
+unsigned int background = 8; /* base03 */
 
 /*
  * Default shape of cursor
@@ -220,6 +223,7 @@ ResourcePref resources[] = {
 		{ "cwscale",      FLOAT,   &cwscale },
 		{ "chscale",      FLOAT,   &chscale },
 		{ "alpha",        FLOAT,   &alpha },
+		{ "alphaOffset",  FLOAT,   &alphaOffset },
 };
 
 /*
